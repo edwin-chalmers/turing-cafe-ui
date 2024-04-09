@@ -29,12 +29,12 @@ export default function Form({ addRes }) {
     }
 
     return (
-        <div className='Form'>
+        <form className='Form'>
             <input value={newRes.name} onChange={handleInputChange} type="text" id="name" name="name" placeholder="Name"/>
             <input value={newRes.date} onChange={handleInputChange} type="text" id="date" name="date" placeholder="Date (mm/dd)"/>
             <input value={newRes.time} onChange={handleInputChange} type="text" id="time" name="time" placeholder="Time"/>
             <input value={newRes.number} onChange={handleInputChange} type="text" id="number" name="number" placeholder="Number of Guests"/>
             <button onClick={submitRes} className='make-reservation'>Make Reservation</button>
-        </div>
+        </form>
     )
 }
