@@ -6,9 +6,12 @@ import { useState, useEffect } from 'react';
 import Form from '../Form/Form'
 import Reservations from '../Reservations/Reservations'
 
-
 function App() {
   const [reservations, setReservations] = useState([])
+
+  function addRes(newRes) {
+    setReservations([...reservations, newRes])
+  }
 
   useEffect(() => {
     fetchData('') 
@@ -21,8 +24,8 @@ function App() {
   return (
     <div className="App">
       <h1 className='app-title'>Turing Cafe Reservations</h1>
-      <Form />
-      <Reservations reservations={reservations}/>
+      <Form addRes={addRes}/>
+      <Reservations reservations={reservations} />
     </div>
   );
 }

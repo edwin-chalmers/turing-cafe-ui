@@ -6,7 +6,8 @@ export default function Card({ id,name,date,time,number }) {
             <h2>{name}</h2>
             <p>{date}</p>
             <p>{time}</p>
-            <p>{number}</p>
+            <p>{`Number of guests: ${number}`}</p>
+            <button>Cancel</button>
         </div>
     )
 }
