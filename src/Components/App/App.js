@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import { fetchData } from '../../apiCalls';
+import { fetchData, postData } from '../../apiCalls';
 import { useState, useEffect } from 'react';
 
 import Form from '../Form/Form'
@@ -11,6 +11,7 @@ function App() {
 
   function addRes(newRes) {
     setReservations([...reservations, newRes])
+    postData('', newRes)
   }
 
   useEffect(() => {
