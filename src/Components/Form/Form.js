@@ -2,7 +2,14 @@ import './Form.css'
 import { useState } from 'react'
 
 export default function Form({ addRes }) {
-    const [newRes, setNewRes] = useState({id: Date.now()})
+    const [newRes, setNewRes] = useState(
+        { 
+            id: Date.now(),
+            name: "",
+            date: "",
+            time: "",
+            numGuests: "",
+        })
 
     function submitRes(e) {
         e.preventDefault()
