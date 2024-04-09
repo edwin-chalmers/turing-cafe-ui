@@ -1,5 +1,13 @@
 .Card{
     width: 250px;
     height: 200px;
-    background-color: blue;
+    background-color: white;
+    color: teal;
+    border-radius: 5px;
+    border: 4px solid teal;
+    padding: 5px;
+}
+
+h2 {
+    margin: none;
 }
